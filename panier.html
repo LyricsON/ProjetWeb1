@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="https://freeiconshop.com/wp-content/uploads/edd/shopping-bag-outline-filled.png" type="image/x-icon">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <title>Shopping Cart</title>
+  </head>
+  <header>
+    <h1>Shopping</h1>
+    <nav>
+      <ul>
+        <li><a href="acceuil.html" class="Acc">Accueil</a></li>
+        <li><a href="produit.html">Produits</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body class="bodyy">
+    <div class="container">
+      <table id="tab">
+        <tr>
+          <th>PRODUCT</th>
+          <th>Quantity</th>
+          <th>Unit Price</th>
+          <th>Price</th>
+        </tr>
+      </table>
+    </div>
+    <script src="panier.js"></script>
+    <script>
+      const Acc = document.querySelector(".Acc");
+      Acc.addEventListener("click", az);
+      function az (e){
+        localStorage.setItem("qq", "0");
+      }
+    </script>
+  </body>
+</html>

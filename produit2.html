@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Shopping - Produits</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://freeiconshop.com/wp-content/uploads/edd/shopping-bag-outline-filled.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/80b005cb5f.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Shopping</h1>
+      <nav>
+        <ul>
+          <li><a href="acceuil.html">Accueil</a></li>
+          <li class="active"><a href="#">Produits</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="panier.html" class="panier">
+      <i class="fa-solid fa-cart-shopping"></i>
+      </a>
+      <p id="cart-value">0</p>
+    </header>
+    <main>
+      <h2>Smartphones</h2>
+      <div class="produits ss">
+
+    <div class="prod p4">
+      <div class="produit">
+        <img class="gg" src="https://www.mediavision.tn/13212-home_default/iphone-11-64go-blanc-tunisie.jpg" alt=""/>
+        <h3>iPhone 11 64Go - Blanc</h3>
+        <br>
+        <p>2489.000 DT</p>
+        <button class="achat">Acheter</button>
+      </div>
+
+      <div class="produit">
+        <img class="gg"
+        src="https://www.mediavision.tn/13208-home_default/iphone-11-64go-noir-tunisie.jpg"
+        alt=""
+      />
+        <h3>iPhone 11 64Go - Noir</h3>
+        <br>
+        <p>2489.000 DT</p>
+        <button class="achat">Acheter</button>
+      </div>
+
+      <div class="produit">
+        <img class="gg"
+        src="https://www.mediavision.tn/13219-home_default/iphone-13-128go-bleu-nuit-tunisie.jpg"
+        alt=""
+      />
+        <h3>iPhone 13 128Go - Bleu Nuit</h3>
+        <br>
+        <p>4239.000 DT</p>
+        <button class="achat">Acheter</button>
+      </div>
+    </div>
+
+    <div class="prod p5">
+      <div class="produit">
+        <img class="gg"
+        src="https://www.mediavision.tn/13245-home_default/iphone-14-plus-128go-bleu-nuit-tunisie.jpg"
+        alt=""
+      />
+        <h3>iPhone 14 Plus - 128Go - bleu Nuit</h3>
+        <p>5599.000 DT</p>
+        <button class="achat">Acheter</button>
+      </div>
+
+      <div class="produit">
+        <img class="gg"
+        src="https://www.mediavision.tn/13225-home_default/iphone-13-pro-max-128go-bleu-tunisie.jpg"
+        alt=""
+      />
+        <h3>iPhone 13 PRO MAX 128Go - Bleu</h3>
+        <p>5655.000 DT</p>
+        <button class="achat">Acheter</button>
+      </div>
+
+      <div class="produit">
+        <img class="gg"
+        src="https://www.mediavision.tn/13236-home_default/iphone-14-128go-blanc-tunisie.jpg"
+        alt=""
+      />
+        <h3>iPhone 14 - 128Go - Starlight</h3>
+        <br>
+        <p>4799.000 DT</p>
+        <button class="achat">Acheter</button>
+      </div>
+    </div>
+
+    <div class="prod p6">
+      <div class="produit">
+        <img class="gg"
+        src="https://www.mediavision.tn/13262-home_default/iphone-14-pro-128go-gold-tunisie.jpg"
+        alt=""
+      />
+        <h3>iPhone 14 Pro - 128Go - GOLD</h3>
+        <br>
+        <p>6399.000 DT</p>
+        <button class="achat">Acheter</button>
+      </div>
+
+      <div class="produit">
+        <img class="gg"
+        src="https://www.mediavision.tn/2789-home_default/telephone-portable-samsung-galaxy-a1-ram-2go-stockage-32go-tunisie-sousse.jpg"
+        alt=""
+      />
+        <h3>Smartphone Samsung Galaxy A11 - Ram 2Go - Stockage 32Go</h3>
+        <p>495.000 DT</p>
+        <button class="achat">Acheter</button>
+      </div>
+
+      <div class="produit">
+        <img class="gg"
+        src="https://www.mediavision.tn/5310-home_default/smartphone-huawei-nova-8i-silver-tunisie.jpg"
+        alt=""
+      />
+        <h3>Smartphone HUAWEI NOVA 8i - 64MP - 128Go</h3>
+        <p>1199.000 DT</p>
+        <button class="achat">Acheter</button>
+      </div>
+    </div>
+
+  <div class="flechet">
+    <i class="fa-solid fa-angle-left"></i>
+    <button class="bott bot1" id="next-page-button" onclick="window.location.href='produit2.html'">1</button>
+    <button class="bott bot2" style="background-color: #8f8f8f;">2</button>
+    <i class="fa-solid fa-angle-right"></i>
+  </div>
+</div>
+    </main>
+    <footer>
+      <p>&copy; Bilel Saida 2023</p>
+    </footer>
+    <script>
+      const btnBott = document.querySelector("#next-page-button");
+      btnBott.addEventListener("click", azert);
+      function azert (e){
+      localStorage.setItem("ww", document.querySelector("#cart-value").innerHTML);
+      window.location.href = "produit.html";
+      }
+      document.querySelector("#cart-value").innerHTML = localStorage.getItem("qq");
+      const Acc = document.querySelector(".Acc");
+      Acc.addEventListener("click", az);
+      function az (e){
+        localStorage.setItem("qq", "0");
+      }
+    </script>
+    <script>
+      const btnAchat = document.querySelectorAll(".achat");
+const table = document.getElementById("tab");
+for (var i = 0; i < btnAchat.length; i++) {
+  btnAchat[i].addEventListener("click", increment);
+}
+var k = Number(document.querySelector("#cart-value").innerHTML)*2;
+var TT = JSON.parse(localStorage.getItem("TT"));
+function increment(e) {
+  const btn = e.target;
+  const divElt = btn.parentElement;
+  const bodyElt =
+    divElt.parentElement.parentElement.parentElement.parentElement;
+  var quntityTag = bodyElt.querySelector("p");
+  var quntityValue = Number(quntityTag.innerHTML);
+  quntityValue++;
+  quntityTag.innerHTML = quntityValue;
+  btn.setAttribute("disabled", "");
+
+  const img = divElt.querySelector("img");
+  const src = img.getAttribute("src");
+  TT[k] = src;
+  TT[k + 1] = divElt.querySelector("p").innerHTML;
+  k = k + 2;
+
+  localStorage.setItem("val", quntityValue);
+  localStorage.setItem("TT", JSON.stringify(TT));
+}
+    </script>
+</body>
+</html>
